@@ -1,0 +1,60 @@
+/* CSS Styling for Header Banner along with Video */
+header {
+    position: relative;
+    background-color: black;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* CSS Style content for Main Body and Images */
+#mainRow {
+    padding-top: 5%;
+}
+
+#randomWord {
+    letter-spacing: 4px;
+    font-size: x-large;
+    margin-top: 5%;
+}
+
+#guessed {
+    padding-top: 15px;
+    font-size: large;
+    letter-spacing: 5px;
+}
+
+#remainingGuesses {
+    font-size: large;
+}
