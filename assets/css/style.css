@@ -58,3 +58,21 @@ header .overlay {
 #remainingGuesses {
     font-size: large;
 }
+
+/* Animate the #hint (blinking) */
+#hint{
+    animation:blinkingText 2.5s infinite;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: lightgrey;
+    border: 5px solid #4aaaa5;
+    padding: 5px;
+    margin: 5px;
+}
+@keyframes blinkingText{
+	0%{		color: #000;	}
+	49%{	color: transparent;	}
+	/* 50%{	color: transparent;	} */
+	/* 99%{	color:transparent;	} */
+	100%{	color: #000;	}
+}
