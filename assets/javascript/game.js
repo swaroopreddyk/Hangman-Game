@@ -1,5 +1,4 @@
-window.onload = function () {
-
+$(document).ready(function (){
     var wordsList = ["ironman", "thor", "avengers", "ultron", "jarvis", "vision", "blackwidow", "thanos", "inifinity", "marvel", "hulk", "antman", "spiderman"];
     var guessesRemaining = 7;
     var randomWord = wordsList[Math.floor((Math.random() * wordsList.length))];
@@ -14,6 +13,8 @@ window.onload = function () {
 
     //call underscore function to display randomWord underscores
     underScores();
+
+    playHeaderVideo();
 
     //listen for keypress, and run function
     document.addEventListener('keypress', function (event) {
@@ -126,4 +127,16 @@ window.onload = function () {
         guessesRemaining = 7;
     }
 
-}
+    function playHeaderVideo(){
+        var videoElement = document.createElement("video");
+        videoElement.setAttribute("src", "assets/media/Marvel_studios_Intro.mp4");
+        videoElement.load();
+        $("#mainHeader").append(videoElement);
+        videoElement.play();
+
+        videoElement.addEventListener('ended', function(e) {
+            videoElement.loop();
+          }, false);
+    }
+
+})
