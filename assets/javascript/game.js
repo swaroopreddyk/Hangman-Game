@@ -14,7 +14,7 @@ $(document).ready(function (){
     //call underscore function to display randomWord underscores
     underScores();
 
-    playHeaderVideo();
+    // playHeaderVideo();
 
     //listen for keypress, and run function
     document.addEventListener('keypress', function (event) {
